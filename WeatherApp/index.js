@@ -46,9 +46,11 @@ async function getWeatherData(cityValue){
 
             weatherDataEl.querySelector(
                 '.details'
-                ).innerHTML = details.map((detail)=>{
+                ).innerHTML = details
+                .map((detail)=>{
                     `<div>${detail}</div>`
-                }).join('');
+                })
+                .join('');
     } catch (error) {
         
     }
